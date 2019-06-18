@@ -3,6 +3,7 @@ package com.hakim.booklist;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String jsonResults) {
             TextView tvResult = (TextView) findViewById(R.id.tvResponse);
+            tvResult.setMovementMethod(new ScrollingMovementMethod());
             TextView errorMsg = (TextView) findViewById(R.id.tv_error);
 
             mLoadingProgress.setVisibility(View.INVISIBLE);
