@@ -10,6 +10,8 @@ import java.net.URI;
 import java.net.URL;
 import java.util.Scanner;
 
+
+
 public class ApiUtil {
     private static final String QUERY_PARAMETER_KEY = "q";
 
@@ -18,7 +20,7 @@ public class ApiUtil {
     public static final String BASE_API_URL = "https://www.googleapis.com/books/v1/volumes";
 
     public static final String KEY = "key";
-    public static final String API_KEY = "AIzaSyB-dLPPl6IDx3IFYwqeyZwlOavobO9ppDs";
+    public static final String API_KEY = BuildConfig.ApiKey;
 
     public static URL buildUrl (String title){
 
