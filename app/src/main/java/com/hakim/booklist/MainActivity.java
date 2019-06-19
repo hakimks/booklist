@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ProgressBar mLoadingProgress;
@@ -46,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(String jsonResults) {
+        protected void onPostExecute(String result) {
             TextView tvResult = (TextView) findViewById(R.id.tvResponse);
             tvResult.setMovementMethod(new ScrollingMovementMethod());
             TextView errorMsg = (TextView) findViewById(R.id.tv_error);
 
             mLoadingProgress.setVisibility(View.INVISIBLE);
-            if (jsonResults == null){
+            if (result == null){
                 tvResult.setVisibility(View.INVISIBLE);
                 errorMsg.setVisibility(View.VISIBLE);
 
@@ -61,7 +62,14 @@ public class MainActivity extends AppCompatActivity {
                 errorMsg.setVisibility(View.INVISIBLE);
             }
 
-            tvResult.setText(jsonResults);
+            ArrayList<Book> books = ApiUtil.getBooksFromJson(result);
+            String resultString = "";
+            for (Book book : books){
+                resultString = resultString + book.title + "\n" +
+                        book.publishedDate + "\n \n";
+            }
+
+            tvResult.setText(resultString);
 
         }
 
