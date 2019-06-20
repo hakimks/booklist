@@ -32,7 +32,7 @@ public class ApiUtil {
         URL url = null;
         Uri uri = Uri.parse(BASE_API_URL).buildUpon()
                 .appendQueryParameter(QUERY_PARAMETER_KEY, title)
-//                .appendQueryParameter(KEY, API_KEY)
+                .appendQueryParameter(KEY, API_KEY)
                 .build();
         try {
             url = new URL(uri.toString());
