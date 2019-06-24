@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class BookListActivity extends AppCompatActivity {
     private ProgressBar mLoadingProgress;
     private RecyclerView rvBooks;
 
