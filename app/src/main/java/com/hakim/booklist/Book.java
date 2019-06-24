@@ -5,15 +5,15 @@ public class Book {
     public String title;
     public String subTitle;
     public String[] authors;
-    public String publishers;
+    public String publisher;
     public String publishedDate;
 
-    public Book(String id, String title, String subTitle, String[] authors, String publishers, String publishedDate) {
+    public Book(String id, String title, String subTitle, String[] authors, String publisher, String publishedDate) {
         this.id = id;
         this.title = title;
         this.subTitle = subTitle;
         this.authors = authors;
-        this.publishers = publishers;
+        this.publisher = publisher;
         this.publishedDate = publishedDate;
     }
 }
