@@ -28,7 +28,7 @@ public class BookListActivity extends AppCompatActivity {
         LinearLayoutManager booksLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvBooks.setLayoutManager(booksLayoutManager);
         try{
-            URL url = ApiUtil.buildUrl("cooking");
+            URL url = ApiUtil.buildUrl("programming");
             new BooksQueryTask().execute(url);
 
         } catch (Exception e){
