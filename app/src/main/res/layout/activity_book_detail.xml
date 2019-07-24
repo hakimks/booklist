@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetail">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:textSize="36sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:textSize="24sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standardmargin"
+        android:layout_marginLeft="@dimen/standardmargin"
+        android:layout_marginTop="@dimen/standardmargin"
+        android:layout_marginEnd="@dimen/standardmargin"
+        android:layout_marginRight="@dimen/standardmargin"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/imgcover"
+        android:layout_width="152dp"
+        android:layout_height="174dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        app:srcCompat="@drawable/book_open" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standardmargin"
+        android:layout_marginLeft="@dimen/standardmargin"
+        android:layout_marginTop="@dimen/standardmargin"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imgcover"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+    <TextView
+        android:id="@+id/tvPublisher"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standardmargin"
+        android:layout_marginLeft="@dimen/standardmargin"
+        android:layout_marginTop="@dimen/standardmargin"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imgcover"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor" />
+
+    <TextView
+        android:id="@+id/tvPublishedDate"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standardmargin"
+        android:layout_marginLeft="@dimen/standardmargin"
+        android:layout_marginTop="@dimen/standardmargin"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imgcover"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublisher" />
+
+    <TextView
+        android:id="@+id/tvDesciption"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standardmargin"
+        android:layout_marginLeft="@dimen/standardmargin"
+        android:layout_marginTop="@dimen/standardmargin"
+        android:layout_marginEnd="@dimen/standardmargin"
+        android:layout_marginRight="@dimen/standardmargin"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgcover" />
+</android.support.constraint.ConstraintLayout>
