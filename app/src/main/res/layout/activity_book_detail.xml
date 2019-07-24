@@ -9,6 +9,12 @@
             type="com.hakim.booklist.Book" />
     </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/published_date_padding"
+        android:paddingLeft="@dimen/published_date_padding">
+
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -104,5 +110,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgcover" />
 </android.support.constraint.ConstraintLayout>
-
+    </ScrollView>
 </layout>
