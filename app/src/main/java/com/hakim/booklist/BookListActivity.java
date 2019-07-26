@@ -1,5 +1,6 @@
 package com.hakim.booklist;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -54,6 +55,18 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
 
         searchView.setOnQueryTextListener(this);
         return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_advanced_search:
+                Intent intent = new Intent(this, SearchActivity.class);
+                startActivity(intent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
