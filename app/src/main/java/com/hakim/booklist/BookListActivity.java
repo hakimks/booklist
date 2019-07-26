@@ -32,12 +32,23 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_list);
         mLoadingProgress = (ProgressBar) findViewById(R.id.bp_loading);
+        Intent intent = getIntent();
+        String query = intent.getStringExtra("Query");
+
         rvBooks = (RecyclerView) findViewById(R.id.rv_books);
         LinearLayoutManager booksLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvBooks.setLayoutManager(booksLayoutManager);
+
+        URL bookUrl;
+
         try{
-            URL url = ApiUtil.buildUrl("programming");
-            new BooksQueryTask().execute(url);
+            if (query ==null || query.isEmpty()){
+                bookUrl = ApiUtil.buildUrl("programming");
+            } else {
+                bookUrl = new URL(query);
+            }
+
+            new BooksQueryTask().execute(bookUrl);
 
         } catch (Exception e){
             Log.d("Error", e.getMessage());
