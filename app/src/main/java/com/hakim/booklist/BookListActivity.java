@@ -123,16 +123,19 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
                 rvBooks.setVisibility(View.INVISIBLE);
                 errorMsg.setVisibility(View.VISIBLE);
 
+
             } else {
                 rvBooks.setVisibility(View.VISIBLE);
                 errorMsg.setVisibility(View.INVISIBLE);
+
+                ArrayList<Book> books = ApiUtil.getBooksFromJson(result);
+                String resultString = "";
+
+                BooksAdaptor adaptor = new BooksAdaptor(books);
+                rvBooks.setAdapter(adaptor);
+
             }
 
-            ArrayList<Book> books = ApiUtil.getBooksFromJson(result);
-            String resultString = "";
-
-            BooksAdaptor adaptor = new BooksAdaptor(books);
-            rvBooks.setAdapter(adaptor);
 
         }
 

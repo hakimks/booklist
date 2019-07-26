@@ -35,7 +35,7 @@ public class SearchActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
                 } else {
                     URL queryUrl = ApiUtil.buildUrl(title,author,publisher,isbn);
-                    
+
                     Intent intent = new Intent(getApplicationContext(), BookListActivity.class);
                     intent.putExtra("Query", queryUrl);
                     startActivity(intent);
