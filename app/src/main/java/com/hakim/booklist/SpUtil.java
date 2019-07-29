@@ -7,6 +7,8 @@ public class SpUtil {
     private SpUtil(){}
 
     public static final String PREF_NAME = "BooksPrefferences";
+    public static final String POSITION = "position";
+    public static final String QUERY = "query";
 
     public static SharedPreferences getPref(Context context){
         return context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
